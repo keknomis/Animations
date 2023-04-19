@@ -11,8 +11,6 @@
       return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  // function to generate random RGB color value
-
   function randomRGB() {
       return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
   }
@@ -108,12 +106,12 @@
   onMounted(()=>{
       canvas = document.querySelector("canvas")
       ctx = canvas.getContext("2d")
-
        width = canvas.width = window.innerWidth;
        height = canvas.height = window.innerHeight;
       loop();
 
   })
+
 </script>
 
 <template>
@@ -121,7 +119,7 @@
     <canvas></canvas>
 </template>
 
-<style>
+<style scoped>
 html, body{
     margin:0;
 }
